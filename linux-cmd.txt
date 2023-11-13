@@ -1,0 +1,21 @@
+#Linux
+
+#Files Folder
+ls -al
+cd <path>
+mkdir <folder name>
+cp <source file path> <destination path> 
+cp -r <source folder path> <destination path> 
+mv <source file path> <destination path> 
+rm <file name>
+rm -r <filder name>
+
+#Read Write
+cat <file name>
+less <file name>
+head <file name>
+tail <file name>
+grep <find text> <*.txt>
+echo "input text" > file.txt
+echo "add input text" >> file.txt
+ls -al /etc | grep <file text> (|နဲ့ခံပြီး နောက်cmdတစ်ခု ဆက်ခိုင်းပြီး စာနဲ့ရှာပြီး filterလုပ်တာ)
