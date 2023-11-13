@@ -11,7 +11,7 @@ rm <file name>
 rm <file name> -Force
 rm <folder name> -Recurse
 
-#Read Write Output
+#Read, Write, Output Files
 cat <file name>
 cat <file name> -Head 10
 cat <file name> -Tail 10
@@ -23,3 +23,4 @@ echo "add input text" >> file.txt
 cat file.txt | Select-String <find text> > output.txt (|နဲ့ခံပြီး နောက်cmdတစ်ခု ဆက်ခိုင်းပြီး >နဲ့ output fileလုပ်တာ)
 rm <file name> 2> $null (error ကို redirectလုပ်တာ, 1.stdout-the output  2.stderr-the error)
 
+#User, File Permissions
