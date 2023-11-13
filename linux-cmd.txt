@@ -1,5 +1,8 @@
 #Linux
 
+sudo halt (shutdown)
+sudo reboot (reboot)
+
 #Files Folder
 ls -al
 cd <path>
@@ -8,9 +11,10 @@ cp <source file path> <destination path>
 cp -r <source folder path> <destination path> 
 mv <source file path> <destination path> 
 rm <file name>
-rm -r <filder name>
+rm -r <folder name>
 
 #Read, Write, Output Files
+find <folder path> -name <file name>    (file search)
 cat <file name>
 less <file name>
 head <file name>
@@ -19,6 +23,36 @@ grep <find text> <*.txt>
 echo "input text" > file.txt
 echo "add input text" >> file.txt
 ls -al /etc | grep <file text> (|နဲ့ခံပြီး နောက်cmdတစ်ခု ဆက်ခိုင်းပြီး စာနဲ့ရှာပြီး filterလုပ်တာ)
-less /var/log/synlog 2> /dev/null (error ကို redirectလုပ်တာ, 1.stdout-the output  2.stderr-the error)
+<command with error> 2> /dev/null (error ကို redirectလုပ်တာ, 1.stdout-the output  2.stderr-the error)
 
-#User, File Permissions
+#Compress
+gzip -k <file name>     (compress)
+gzip -d <file name>     (decompress)
+tar -czf <set tar filename> file1, file2     (compress)
+tar -xzv <tar filename> -C <destination path>    (decompress)
+
+#User Account
+#check user and group
+cat /etc/passwd
+cat /etc/group 
+#change password
+passwd      (password change)
+sudo cat /etc/passwd    (all password in hash)
+sudo passwd -e <username>   (userကို next loginမှာ passwordချိန်းခိုင်းတာ, -e means expire)
+#create,delete user
+sudo useradd <username>     (ပီးရင် passwdနဲ့ passwordပေး, -e နဲ့ passwordချိန်းခိုင်း)
+sudo userdel <username>
+#create,delete group
+sudo groupadd <group name>
+sudo groupdel <group name>
+#add, remove to group
+sudo usermod -a -G <group name> <username>      (add to group)
+sudo deluser <username> <group name>    (remove from group)
+
+#File Permissions
+ls -l   (check permission)
+chmod ugo+rwx <file or folder name>     (set permission, u-owner,g-group,o-other)
+chmod g-wx <file or folder name>    (remove permission)
+chmod 754 <file or folder name>     (set permission, 4-read,2-write,1-excute)
+sudo chown <username> <file or folder name>     (file or folder's owner change)
+sudo chgrp <group new name> <old owner group name>    (file or folder's owner group change)
