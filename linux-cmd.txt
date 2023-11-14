@@ -1,7 +1,20 @@
 #Linux
-
+  
+#System
 sudo halt (shutdown)
 sudo reboot (reboot)
+top (show task manager)
+lscpu (cpu information)
+cat /etc/lsb_release (OS version)
+uname -r (check kernel version)
+sudo apt update | sudo apt full-upgrade  (kernel update)
+
+#Debian Package
+dpkg -i <filename.deb>      (deb package install လုပ်ခြင်း)
+dpkg -r <filename.deb>      (deb package remove လုပ်)
+dpkg -l     (installed deb package list)
+dpkg -l | grep <package name>       (installထားပြီးသားလား ရှာတာ)
+
 
 #Files Folder
 ls -al
@@ -41,7 +54,8 @@ sudo cat /etc/passwd    (all password in hash)
 sudo passwd -e <username>   (userကို next loginမှာ passwordချိန်းခိုင်းတာ, -e means expire)
 #create,delete user
 sudo useradd <username>     (ပီးရင် passwdနဲ့ passwordပေး, -e နဲ့ passwordချိန်းခိုင်း)
-sudo userdel <username>
+sudo useradd --create-home -d /home/<user folder name> <username>  (user account createလုပ်ရင်း home folder တစ်ခါတည်းဆောက်)
+sudo userdel <username>    (userရဲ့ home folderကိုပါဖျက်ချင်ရင် -r ထည့်)
 #create,delete group
 sudo groupadd <group name>
 sudo groupdel <group name>
@@ -56,3 +70,12 @@ chmod g-wx <file or folder name>    (remove permission)
 chmod 754 <file or folder name>     (set permission, 4-read,2-write,1-excute)
 sudo chown <username> <file or folder name>     (file or folder's owner change)
 sudo chgrp <group new name> <old owner group name>    (file or folder's owner group change)
+
+#Storage and partition
+#format
+sudo parted -l      (list disk)
+sudo parted /dev/sdb    (select disk in parted)
+() print    (show disk information)
+() mklabel gpt      (set label)
+() mkpart primary ext4 1MiB 5GiB    (create partition)
+sudo mkfs -t ext4 /dev/sdb1     (format partition)

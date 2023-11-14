@@ -23,6 +23,9 @@ echo "add input text" >> file.txt
 cat file.txt | Select-String <find text> > output.txt   (|နဲ့ခံပြီး နောက်cmdတစ်ခု ဆက်ခိုင်းပြီး >နဲ့ output fileလုပ်တာ)
 <command with error> 2> $null   (error ကို redirectလုပ်တာ, 1.stdout-the output  2.stderr-the error)
 
+#Compress
+Compress-Archive -Path <input files path> <output file path\archivename.zip>
+
 #User Account
 #check user and group
 Get-LocalUser
@@ -39,3 +42,14 @@ net user <username> /del (or) Remove-LocalUser <username>
 icacls <file or folder>     (check permission, termတွေမသိရင် /? နဲံကြည့်)
 icacls '<folder or file path>' /grant '<group name>:(OI)(CI)(R)'    (set permission group, R-Read,W-Write,M-Modify,F-FullControl)
 icacls '<folder or file path>' /remove <group name>     (remve group permission )
+
+#Storage and partition
+#format (need admin permission)
+Diskpart  (open dispart tool)
+> list Diskpart     (show disk list)
+> select disk 1     (select disk to do)
+> clean     (erase and clean all partition)
+> create partition primary  
+> select partition 1       
+> active
+> format FS=NTFS label=diskname quick
