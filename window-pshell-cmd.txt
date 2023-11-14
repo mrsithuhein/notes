@@ -55,3 +55,8 @@ Diskpart  (open dispart tool)
 > format FS=NTFS label=diskname quick
 #other commands
 chkdsk /F C:    (check disk and fix, repair)
+
+#Task Manager
+tasklist    (show task list in cmd)
+taskkill /pid 2345  
+Get-Process (show task list in powershell)

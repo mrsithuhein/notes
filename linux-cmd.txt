@@ -83,7 +83,11 @@ sudo mkfs -t ext4 /dev/sdb1     (format partition)
 sudo mount /dev/sdb <mount point>   (တစ်ခါအတွက် mount)
 sudo umount /dev/sdb
 #other commands
-df -h   (chek all disks free space)
+df -h   (check all disks free space)
 sudo fsck /dev/sdb      (check disk and fix)
 blkid   (show all disks with UUID)
 ln -s <source path> <destination path>      (create link)
+
+#Task Manager
+ps -ef   (show process list)
+kill 3453
