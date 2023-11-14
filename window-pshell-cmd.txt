@@ -53,3 +53,5 @@ Diskpart  (open dispart tool)
 > select partition 1       
 > active
 > format FS=NTFS label=diskname quick
+#other commands
+chkdsk /F C:    (check disk and fix, repair)

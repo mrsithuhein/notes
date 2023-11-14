@@ -42,7 +42,7 @@ ls -al /etc | grep <file text> (|နဲ့ခံပြီး နောက်cmd�
 gzip -k <file name>     (compress)
 gzip -d <file name>     (decompress)
 tar -czf <set tar filename> file1, file2     (compress)
-tar -xzv <tar filename> -C <destination path>    (decompress)
+tar -xzf <tar filename> -C <destination path>    (decompress)
 
 #User Account
 #check user and group
@@ -79,3 +79,11 @@ sudo parted /dev/sdb    (select disk in parted)
 () mklabel gpt      (set label)
 () mkpart primary ext4 1MiB 5GiB    (create partition)
 sudo mkfs -t ext4 /dev/sdb1     (format partition)
+#mount
+sudo mount /dev/sdb <mount point>   (တစ်ခါအတွက် mount)
+sudo umount /dev/sdb
+#other commands
+df -h   (chek all disks free space)
+sudo fsck /dev/sdb      (check disk and fix)
+blkid   (show all disks with UUID)
+ln -s <source path> <destination path>      (create link)
