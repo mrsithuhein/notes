@@ -1,10 +1,10 @@
 #Linux
   
 #System
-sudo halt (shutdown)
+sudo halt (or) poweroff (shutdown)
 sudo reboot (reboot)
 lscpu (cpu information)
-cat /etc/lsb_release (OS version)
+lsb_release -a (OS version)
 uname -r (check kernel version)
 sudo apt update | sudo apt full-upgrade  (kernel update)
 
