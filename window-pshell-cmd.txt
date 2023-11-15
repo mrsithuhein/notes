@@ -56,7 +56,8 @@ Diskpart  (open dispart tool)
 #other commands
 chkdsk /F C:    (check disk and fix, repair)
 
-#Task Manager
+#Task, Resource Manager
 tasklist    (show task list in cmd)
 taskkill /pid 2345  
 Get-Process (show task list in powershell)
+Get-Process | Sort CPU -descending | Select -first 3 -Property ID,ProcessName,CPU       (top 3 cpu high used processes)

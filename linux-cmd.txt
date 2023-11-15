@@ -3,7 +3,6 @@
 #System
 sudo halt (shutdown)
 sudo reboot (reboot)
-top (show task manager)
 lscpu (cpu information)
 cat /etc/lsb_release (OS version)
 uname -r (check kernel version)
@@ -88,6 +87,11 @@ sudo fsck /dev/sdb      (check disk and fix)
 blkid   (show all disks with UUID)
 ln -s <source path> <destination path>      (create link)
 
-#Task Manager
+#Task, Resource Manager
 ps -ef   (show process list)
-kill 3453
+kill 3453 (or) kill -KILL 3453
+kill -TSTP 3453     (pause process)
+kill -CONT 3453     (continue process)
+top     (show resource usage)
+uptime      (show system uptime and how many user login)
+lsof        (which file is open and using)
