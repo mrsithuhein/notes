@@ -1,0 +1,19 @@
+https://triwisibolang.blogspot.com/2018/07/installing-linux-driver-for-fujixerox.html
+
+Installing Linux Driver for FujiXerox Docuprint M115
+FujiXerox does not provide Linux Driver for Docuprint M115.
+
+But, fortunately, there is already Linux Generic driver works out for this printer.
+
+Here, it is:
+
+
+For the FujiXerox DocuPrint M115W on Linux try:
+
+NOTE: my printer IP is 192.168.43.28, so replace it with your printer's IP.
+
+Browse your printer from your web browser. You can see the available ports for your printer on: http://192.168.43.28/net/net/service.html
+
+In the Linux Printer manager, use the following for PCL:
+Device URI: lpd://192.168.43.28/PCL_P1
+Driver: Generic PCL Laser Printer
