@@ -95,3 +95,6 @@ kill -CONT 3453     (continue process)
 top     (show resource usage)
 uptime      (show system uptime and how many user login)
 lsof        (which file is open and using)
+
+#Remote
+ssh username@ipaddress
