@@ -1,10 +1,1 @@
-No.1 ကို Temporary solution  အနေနဲ့ လုပ်ဆောင်ပေးဖို့ အောက်ပါအတိုင်း SOP လေး ထုတ်ပေးထားပါမယ်။
-Change Request/ Undo Ngasaya ခေါ်ပြီး Field App မှာ ပျောက်နေတယ်ဆိုတဲ့ ticket တွေမှာ
- 
-Please instruct the FO to do the followings:
-1. Data များကို Upload အရင်ပြုလုပ်ပါ (IMPORTANT) 
-2. Pending Approval ကိုဝင်ပါ
-3. ညာဘက် အပေါ်ထောင့်တွင်ရှိသော Sync Icon လေးကိုနှိပ်ပါ Start Date နဲ့ End Date ဆိုပြီး Date Picker များပေါ်လာပါမည်
-4. Start Date တွင် Change Request လုပ်ခဲ့သော Date ကိုရွေးပါ (Dashboard Interview History တွင်ကြည့်လို့ရပါသည်)
-5. End Date တွင် Start Date တွင်ရွေးခဲ့သောရက်ရဲ့ နောက်တစ်ရက်ကိုရွေးပါ (Eg: Start Date → 13 Sep, End Date → 14 Sep)
-6. 6. အထက်ပါအချက်များပြီးလျှင် Sync ကိုနှိပ်ပြီး Change Request နှင့် Undo Ngasaya လုပ်ထားသော Interview များကိုပြန် Check ကြည့်ပါ
+MUDN FO Teamviewer - hanamicro123!
